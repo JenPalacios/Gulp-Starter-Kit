@@ -29,19 +29,19 @@ This starter kit will achieve the following:
 ### How to download this repo to your machine
 1. Click on ```Fork``` (this will create a copy of this repo in your GitHub)
 2. You can either clone  the repo or download a zip file to your local machine.
-  * To **clone** the repo:
-    1. Open the terminal
-    2. Cd into your Sites directory
-    3. Run ``` git clone https://github.com/[yourUserName]]/Gulp-Starter-Kit.git``` (don't forget to modify [yourUserName])
-    4. Cd into "Gulp-Starter-Kit"
-    5. Change the name from "Gulp-Starter-Kit" to your project's relevant name by running ```mv /Users/[yourUserName]/Sites/Gulp-Starter-Kit /Users/jPalacios/Sites/newName```
+##### To **clone** the repo:
+  1. Open the terminal
+  2. Cd into your Sites directory
+  3. Run ``` git clone https://github.com/[yourUserName]]/Gulp-Starter-Kit.git``` (don't forget to modify [yourUserName])
+  4. Cd into "Gulp-Starter-Kit"
+  5. Change the name from "Gulp-Starter-Kit" to your project's relevant name by running ```mv /Users/[yourUserName]/Sites/Gulp-Starter-Kit /Users/jPalacios/Sites/newName```
 
-  * To **download** the repo:
-    1. Click on ```Clone or download```
-    2. Click on Download ZIP
-    3. Save it in your Sites directory
-    4. Unzip the folder
-    5. Change the name from "Gulp-Starter-Kit" to your project's relevant name
+##### To **download** the repo:
+  1. Click on ```Clone or download```
+  2. Click on Download ZIP
+  3. Save it in your Sites directory
+  4. Unzip the folder
+  5. Change the name from "Gulp-Starter-Kit" to your project's relevant name
 
 
 ### How to start using this repo
