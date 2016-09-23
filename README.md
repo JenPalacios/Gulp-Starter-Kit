@@ -21,7 +21,7 @@ If you are a total beginner and do not know what an AMP stack or virtual host is
 ### What does this Gulp file include?
 
 The Gulp-Starter-Kit will achieve the following:
-* Compile Sass and minify your css file.
+* Compile Sass and minify your CSS file.
 * Add necessary vendor prefixes to your CSS.
 * Concatenate and minify your JavaScript files.
 * Load your **vhost** automatically after any changes on your HTML, CSS or JavaScript.
