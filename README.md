@@ -29,6 +29,7 @@ This starter kit will achieve the following:
 ### How to download this repo to your machine
 1. Click on ```Fork``` (this will create a copy of this repo in your GitHub)
 2. You can either clone  the repo or download a zip file to your local machine.
+
 ##### To **clone** the repo:
   1. Open the terminal
   2. Cd into your Sites directory
