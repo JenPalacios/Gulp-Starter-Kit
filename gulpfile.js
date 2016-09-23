@@ -56,10 +56,9 @@ gulp.task('compressJS', function(){
 gulp.task('watch', ['sass'], function() {
   browserSync.init({
     logSnippet: false
-    // server: "./"
   });
 
-  opn('http://www.gulp.local');
+  opn('http://changeme.local');
 
   //Watch SASS files and if there is a change runs 'sass' task
   gulp.watch('frontend/sass/*.scss', ['sass']);

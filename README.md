@@ -9,10 +9,10 @@ If you have any suggestions on how to make this better, please let me know.
 
 **Disclaimer**
 
-This starter kit is meant to be used with the following environment:
+This starter kit is meant to be used in the following environment:
 
 - Mac machine running on El Capitan.
-- An AMP stack (for a super detailed guide of how to install this stack on your Mac go to [this blog post](https://coolestguidesontheplanet.com/get-apache-mysql-php-and-phpmyadmin-working-on-osx-10-11-el-capitan/).)
+- An AMP stack (for a super detailed guide on how to install this stack on your Mac go to [this blog post](https://coolestguidesontheplanet.com/get-apache-mysql-php-and-phpmyadmin-working-on-osx-10-11-el-capitan/).)
 - Virtual hosts (for a guide on how to do this go to [this other blog post](https://coolestguidesontheplanet.com/how-to-set-up-virtual-hosts-in-apache-on-mac-osx-10-11-el-capitan/.)
 - Node.js and Gulp installed globally (for a guide on how to do this go to [this blog post]())
 
@@ -20,7 +20,7 @@ If you are a total beginner and do not know what an AMP stack or virtual host is
 
 ### What does this Gulp file include?
 
-This starter kit will achieve the following:
+The Gulp-Starter-Kit will achieve the following:
 * Compile Sass and minify your css file.
 * Add necessary vendor prefixes to your CSS.
 * Concatenate and minify your JavaScript files.
@@ -33,9 +33,16 @@ This starter kit will achieve the following:
 ##### To **clone** the repo:
   1. Open the terminal
   2. Cd into your Sites directory
-  3. Run ``` git clone https://github.com/[yourUserName]]/Gulp-Starter-Kit.git``` (don't forget to modify [yourUserName])
+  3. Run
+  ```
+  git clone https://github.com/[yourUserName]]/Gulp-Starter-Kit.git
+  ```
+  (don't forget to modify [yourUserName])
   4. Cd into "Gulp-Starter-Kit"
-  5. Change the name from "Gulp-Starter-Kit" to your project's relevant name by running ```mv /Users/[yourUserName]/Sites/Gulp-Starter-Kit /Users/jPalacios/Sites/newName```
+  5. Change the name from "Gulp-Starter-Kit" to your project's relevant name by running
+  ```
+  mv /Users/[yourUserName]/Sites/Gulp-Starter-Kit /Users/jPalacios/Sites/newName
+  ```
 
 ##### To **download** the repo:
   1. Click on ```Clone or download```
@@ -54,3 +61,31 @@ This starter kit will achieve the following:
 6. Open the terminal
 7. Cd into your directory
 8. Run ```gulp```
+
+### A note about BrowserSync
+BrowserSync is meant to open localhost:3000, since I am using an AMP stack the way around this was:
+
+1. I modified the watch task to leave the function blank. So it looked like this:
+
+```
+gulp.task('watch', ['sass'], function() {
+  browserSync.init({
+
+  });```
+
+2. In the terminal I ran "gulp", which spat out the following message:
+
+```
+Copy the following snippet into your website, just before the closing </body> tag
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.16.0'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+```
+3. I added that script in my html, just like the message said.
+4. I then modified the watch task so that every time that run would run the message would not be shown. The final code looks like this:
+```
+gulp.task('watch', ['sass'], function() {
+  browserSync.init({
+    logSnippet: false
+  });
+```
