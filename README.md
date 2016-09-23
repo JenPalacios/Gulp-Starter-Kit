@@ -1,5 +1,5 @@
-# Gulp Starter Kit
-<sup>for an AMP stack using vHosts</sup>
+# Gulp Starter Kit <sub>for an AMP stack using vHosts</sub>
+
 ### by { colochos }
 
 ### Quick Overview
