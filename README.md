@@ -71,7 +71,8 @@ BrowserSync is meant to open localhost:3000, since I am using an AMP stack the w
 gulp.task('watch', ['sass'], function() {
   browserSync.init({
 
-  });```
+  });
+```
 
 2. In the terminal I ran "gulp", which spat out the following message:
 
@@ -83,6 +84,7 @@ Copy the following snippet into your website, just before the closing </body> ta
 ```
 3. I added that script in my html, just like the message said.
 4. I then modified the watch task so that every time that run would run the message would not be shown. The final code looks like this:
+
 ```
 gulp.task('watch', ['sass'], function() {
   browserSync.init({
