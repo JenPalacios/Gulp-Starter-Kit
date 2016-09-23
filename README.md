@@ -67,16 +67,16 @@ BrowserSync is meant to open localhost:3000, since I am using an AMP stack the w
 
 1. I modified the watch task to leave the function blank. So it looked like this:
 
-```
-gulp.task('watch', ['sass'], function() {
+  ```javascript
+  gulp.task('watch', ['sass'], function() {
   browserSync.init({
 
   });
-```
+  ```
 
 2. In the terminal I ran "gulp", which spat out the following message:
 
-```
+```javascript
 Copy the following snippet into your website, just before the closing </body> tag
 <script id="__bs_script__">//<![CDATA[
     document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.16.0'><\/script>".replace("HOST", location.hostname));
@@ -85,7 +85,7 @@ Copy the following snippet into your website, just before the closing </body> ta
 3. I added that script in my html, just like the message said.
 4. I then modified the watch task so that every time that run would run the message would not be shown. The final code looks like this:
 
-```
+```javascript
 gulp.task('watch', ['sass'], function() {
   browserSync.init({
     logSnippet: false
